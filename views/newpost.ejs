@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+    <style>
+        body {
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 8px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a new message</h1>
+
+    <div>
+        <form method="POST" action="/newpost">
+            <label for = 'author'>Author:</label><br>
+            <input name = 'authorName' type = 'text' id = 'author' required>
+            <br>
+            <label for = 'message'>Message:</label><br>
+            <input name = 'messageText' type = 'text' id = 'message' required>
+            <br>
+            
+            <button type="submit">Submit a post</button>
+        </form>
+    </div>
+</body>
+</html>

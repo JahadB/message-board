@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To HomePage</h1>
+
+    <br>
+    <a href = '/about'>About Page</a>
+    <hr>
+    <a href = '/newpost'>Create a new post</a>
+
+    <br>
+
+    <div class = "content">
+        <% if (messages.length > 0) {%>
+            <% messages.forEach(message => { %>
+                <h3><%= message.user %></h3>
+                <p><%= message.text %></p>
+                <p><%= message.added %></p>
+            <% });%>
+            <% };%> 
+    </div>
+</body>
+</html>
